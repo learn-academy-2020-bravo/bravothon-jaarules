@@ -4,15 +4,24 @@ import Select from 'react-select';
 
 
 const options = [
-  { value: 'gala', label: 'Gala' },
-  { value: 'house', label: 'House' },
-  { value: 'work', label: 'Work' },
+  { value: 'birthdayParty', label: 'Birthday Party' },
+  { value: 'happyHour', label: 'Happy Hour' },
+  { value: 'office', label: 'Office Party' },
+  { value: 'wedding', label: 'Wedding Party'},
+  { value: 'holiday', label: 'Holiday Party'},
+  { value: 'mitzvah', label: 'Bar/Bat Mitzvah'},
+  { value: 'graduation', label: 'Graduation Party'}
+
 ];
 
 const itemObj = {
-  gala: ['chocolate fountain', 'go go dancers'],
-  house: ['chips', 'guacamole'],
-  work: ['hawaiian shirts', 'sandwiches'],
+  birthdayParty: ['venue', 'birthday cake', 'Entertainment rentals', 'Party favors', 'Food and beverage', 'plates, cups, napkins, silverware'],
+  happyHour: ['chips', 'guacamole'],
+  office: ['hawaiian shirts', 'sandwiches'],
+  wedding: ['venue', 'party supplies', 'flower, invitations, tables and chairs'],
+  holiday: ['glitter decor, warm drinks, party favors (unique), party supplies'],
+  mitzvah: ['venue, food and bev, entertainment, party supplies'],
+  graduation: ['venue, party supplie, food and bev, entertainment'],
   empty: []
 }
 
@@ -47,4 +56,3 @@ class App extends React.Component {
 }
 
 export default App;
-
