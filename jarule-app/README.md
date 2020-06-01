@@ -5,7 +5,6 @@ Party Shopping List Assist
 - User should see options on the dropdown that include:
   - Birthday Party
   - Wedding Party
-  - Bar/Bat Mitzvah
   - Happy Hour
   - Holiday party
   - Office party
