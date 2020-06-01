@@ -1,26 +1,35 @@
-import React from 'react';
+import React, {Component}  from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
+
+class App extends Component{
+
+
+
+  render(){
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <>
+      <header>
+
       </header>
-    </div>
+      <body>
+
+          <select value="Which Party Are you planning today?">
+            <option value="Which Party Are you planning today?">Which Party Are you planning today?</option>
+            <option value="Birthday Party">Birthday Party</option>
+            <option value="Wedding Party">Wedding Party</option>
+            <option value="Happy Hour">Happy Hour</option>
+            <option value="Office party">Office party</option>
+            <option value="Holiday party">Holiday Party</option>
+            <option value="House-Warming Party">House-Warming Party</option>
+            <option value="Graduation Party">Graduation Party</option>
+          </select>
+
+      </body>
+
+    </>
   );
 }
-
+}
 export default App;
