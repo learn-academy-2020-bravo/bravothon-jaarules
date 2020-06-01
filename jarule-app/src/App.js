@@ -1,35 +1,50 @@
-import React, {Component}  from 'react';
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import Select from 'react-select';
 
 
-class App extends Component{
+const options = [
+  { value: 'gala', label: 'Gala' },
+  { value: 'house', label: 'House' },
+  { value: 'work', label: 'Work' },
+];
 
-
-
-  render(){
-  return (
-    <>
-      <header>
-
-      </header>
-      <body>
-
-          <select value="Which Party Are you planning today?">
-            <option value="Which Party Are you planning today?">Which Party Are you planning today?</option>
-            <option value="Birthday Party">Birthday Party</option>
-            <option value="Wedding Party">Wedding Party</option>
-            <option value="Happy Hour">Happy Hour</option>
-            <option value="Office party">Office party</option>
-            <option value="Holiday party">Holiday Party</option>
-            <option value="House-Warming Party">House-Warming Party</option>
-            <option value="Graduation Party">Graduation Party</option>
-          </select>
-
-      </body>
-
-    </>
-  );
+const itemObj = {
+  gala: ['chocolate fountain', 'go go dancers'],
+  house: ['chips', 'guacamole'],
+  work: ['hawaiian shirts', 'sandwiches'],
+  empty: []
 }
+
+class App extends React.Component {
+  state = {
+    selectedOption: {value: 'empty'},
+  };
+  handleChange = selectedOption => {
+    this.setState(
+      { selectedOption },
+      () => console.log(`Option selected:`, this.state)
+    );
+  };
+  render() {
+    const { selectedOption } = this.state;
+
+    return (
+      <>
+      <Select
+        value={selectedOption}
+        onChange={this.handleChange}
+        options={options}
+      />
+      <div>
+        {itemObj[this.state.selectedOption.value].map((name, index) => {
+          return <div>{name}</div>
+        })}
+      </div>
+      </>
+    );
+  }
 }
+
 export default App;
+
